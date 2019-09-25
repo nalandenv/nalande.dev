@@ -1,18 +1,14 @@
-/* colors{
-    #000000;
-    #291525;
-    #eee0cb; 
-    #808080;
-} */
 
 html {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    
     background-image: url("/assets/background.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(1, 0, 37);
 }
 body {
     font-family: 'Changa', sans-serif;
