@@ -1,0 +1,15 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "This is Nikhil Nalande's personal website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikhil Nalande",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
