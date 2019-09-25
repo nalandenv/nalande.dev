@@ -1,37 +1,114 @@
+/* colors{
+    #000000;
+    #291525;
+    #eee0cb; 
+    #808080;
+} */
+
 html {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    /* background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%) */
-    background-image: url("image.jpg");
+    background-image: url("/assets/background.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 body {
     font-family: 'Changa', sans-serif;
+    font-size: 1em;
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    margin: 0;
 }
- #title{
-     position: absolute;
-     top: 20%;
-     left: 0;
-     right: 0;
-     color: #fff;
-     text-align: left;
-     font-family: 'Changa', sans-serif;
-     font-weight: 300;
-     font-size: 50px;
-     letter-spacing: 10px;
-     margin-top: -60px;
-     padding-left: 10px;
- }
-
- #title span {
-     background: -webkit-linear-gradient(white, #38495a);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
- }
-
+.content {
+    font-size: 3em;
+    text-align: center;
+    padding: 0;
+    margin-top: 10%;
+    margin-bottom: 0;
+    letter-spacing: 0.5rem; 
+}
+.content #name{
+    background: -webkit-linear-gradient(#ffffff, #2f3c64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content #desc{
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    color: rgba(190, 215, 252, 0.678);
+}
+hr  {
+    border: 0;
+    height: 1px;
+    margin: 0 auto;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+a{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+.button-container {
+    padding: 0;
+    margin: 10% auto;
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 4px solid rgba(190, 215, 252, 0.678);
+    border-radius: 40px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+  }
+  .button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: rgba(190, 215, 252, 0.678);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  .button:hover {
+    color: #ffffff;
+    border: 2px solid rgba(190, 215, 252, 0.678);
+  }
+  .button:hover:before {
+    top: -35%;
+    background-color: rgba(190, 215, 252, 0.678);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  .button:hover:after {
+    top: -45%;
+    background-color: rgba(190, 215, 252, 0.678);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
 #stars {
     width: 0.1rem;
     height: 0.1rem;
@@ -52,7 +129,7 @@ body {
 
 @keyframes animStar {
     from {
-        transform: translateY(-4000px)
+        transform: translateY(-1000px)
     }
     to {
         transform: translateY(0px)
