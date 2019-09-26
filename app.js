@@ -15,4 +15,9 @@ app.get("/about_me", function(req, res){
     res.render("about_me");
 });
 
+// projects
+app.get("/projects", function(req, res){
+    res.render("projects");
+});
+
 app.listen(process.env.PORT, process.env.IP);
