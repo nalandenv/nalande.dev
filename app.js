@@ -20,4 +20,8 @@ app.get("/projects", function(req, res){
     res.render("projects");
 });
 
+app.get("/resume", function(req, res){
+    res.render("resume");
+});
+
 app.listen(process.env.PORT, process.env.IP);
