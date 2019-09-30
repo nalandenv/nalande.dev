@@ -11,7 +11,21 @@ var data = [
     },
     {
     name: "Demo 2",
-    image: "http://www.4usky.com/data/out/34/164284775-field-wallpapers.jpg",
+    image: "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png",
+    description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla turpis nibh, placerat in tincidunt et, mattis in arcu. Morbi eu purus egestas, pulvinar leo id, faucibus nibh. Vivamus vehicula leo ipsum, lacinia tincidunt urna viverra ut. Nulla at orci sed risus pellentesque blandit vitae at neque. Proin erat justo, tristique ac ipsum et, lacinia rhoncus est. Vivamus non pretium elit. Integer sed nisi id mi pellentesque dapibus. Nulla in libero eros.",
+    hostedLink: "#",
+    githubRepo: "#"
+    },
+    {
+    name: "Demo 3",
+    image: "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png",
+    description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla turpis nibh, placerat in tincidunt et, mattis in arcu. Morbi eu purus egestas, pulvinar leo id, faucibus nibh. Vivamus vehicula leo ipsum, lacinia tincidunt urna viverra ut. Nulla at orci sed risus pellentesque blandit vitae at neque. Proin erat justo, tristique ac ipsum et, lacinia rhoncus est. Vivamus non pretium elit. Integer sed nisi id mi pellentesque dapibus. Nulla in libero eros.",
+    hostedLink: "#",
+    githubRepo: "#"
+    },
+    {
+    name: "Demo 4",
+    image: "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png",
     description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla turpis nibh, placerat in tincidunt et, mattis in arcu. Morbi eu purus egestas, pulvinar leo id, faucibus nibh. Vivamus vehicula leo ipsum, lacinia tincidunt urna viverra ut. Nulla at orci sed risus pellentesque blandit vitae at neque. Proin erat justo, tristique ac ipsum et, lacinia rhoncus est. Vivamus non pretium elit. Integer sed nisi id mi pellentesque dapibus. Nulla in libero eros.",
     hostedLink: "#",
     githubRepo: "#"

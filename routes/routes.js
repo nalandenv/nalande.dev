@@ -3,7 +3,13 @@ var express = require("express"),
     Project  = require("../models/projects");
 
 router.get("/", function(req, res){
-    res.render("home");
+    Project.find({}, function(err, foundProject){
+        if(err){
+            res.redirect("back");
+        } else {
+            res.render("home",{project: foundProject});
+        }
+    })
 });
 
 //about me

@@ -6,7 +6,7 @@ var express  = require("express"),
     routes   = require("./routes/routes"); //importing routes
 
 // setup database for projects
-mongoose.connect("mongodb://localhost/project" , {
+mongoose.connect("mongodb://localhost/project_2" , {
     useNewUrlParser: true,
     useUnifiedTopology:true,
     useFindAndModify: false,

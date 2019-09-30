@@ -1,29 +1,91 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Nikhil Nalande</title>
-        
+        <title>nalande.dev</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="stylesheets/home.css">
-        <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css?family=Changa:400,700&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
-        <section class="wrapper">
-            <div id="stars"></div> 
-            <div id="stars2"></div> 
-            <div id="stars3"></div>
-            <div class="content">
-                <span id="name">NIKHIL NALANDE</span>
-                <hr>
-                <span id="desc">I'm a Computer Engineer & Full Stack Developer.</span>
-                <div class="button-container">
-                        <a href="/projects" class="button">
-                            My Projects
-                        </a>
-                    </div>
-            </div>
-            
-        </section>
         
-    </body>
-</html>
+    
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand m-0 p-0" href="#home">Nikhil Nalande</a>
+            <button id="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item p-0 mx-3">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item p-0 mx-3">
+                        <a class="nav-link" href="/resume">Resume</a>
+                    </li>
+                    <li class="nav-item p-0 mx-3">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item p-0 mx-3">
+                        <a class="nav-link" href="#about_me">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+        <div class="container text-center border-dark">
+            <div class="row justify-content-center">
+                <div class="col-sm-12">
+                    <div id="home" >
+                        <h1 class="display-4">NIKHIL NALANDE</h1>
+                        <hr>
+                        <p class="h4">I'm a Computeer Engineer & Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="style-five">
+    <section id="projects">
+        <h1 class="section-heading display-4 text-center">< Projects ></h1>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <% project.forEach(function(data){ %>
+                    <div class="col-lg-8 project my-3">
+                        <h1 class="project-name"><%= data.name %></h1>
+                        <div class="row content-main">
+                            <div class="col-lg-4 text-center">
+                                <img class="rounded img-thumbnail" src="<%= data.image %>">
+                            </div>
+                            <div class="col-lg-8 text-center">
+                                <p><%= data.description %></p>
+                                <a href="<%= data.hostedLink %>"><button><img src="assets/launch.png" alt=""></button></a>
+                                <a class="custom-button" href="<%= data.githunRepo %>"><button><img src="assets/github.png" alt=""></button></a>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h1 class="section-heading-light display-4 text-center">< Skills & Frameworks ></h1>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Javascript</li>
+                    <li>node.js</li>
+                    <li>MongoDB</li>
+                </div>
+                <div class="col-md-6">
+                    <li>Heroku</li>
+                    <li>Bootstrap 3 & 4</li>
+                    <li>jQuery</li>
+                    <li>Algorithms</li>
+                    <li>SASS & SCSS</li>
+                </div>
+            </div>
+        </div>
+    </section>
