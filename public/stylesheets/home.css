@@ -10,7 +10,7 @@ h1{
   letter-spacing: 0.5rem;
 }
 #home {
-  height: 969px;
+  height: calc(100vh + 53px);
   position: relative;
   padding-top:  25%;
   letter-spacing: 0.3rem;
@@ -105,9 +105,65 @@ button img{
 #skills{
   background: #EFE9F4;
 }
-li{
+/* li{
   text-align: center;
   line-height: 3.5rem;
   font-size: 2rem;
   list-style: none;
+} */
+.skills {
+  width: 100px;
+  height: 70px;
 }
+#footer{
+  padding-top: 40px;
+  text-align: center;
+  position: relative;
+  height: 300px;
+  background: #EE6352;
+}
+#copyrights{
+  color: #EFE9F4;
+  margin-bottom: 10px;
+}
+#contact_me{
+  background: #EFE9F4;
+}
+.form-m{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373737;
+  background-clip: padding-box;
+  border: 4px solid #373737;
+  border-radius: 10px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-m:hover{
+  border: 4px solid #EE6352;
+  border-radius: 10px;
+}
+.form-m:focus{
+  border: 4px solid #EE6352;
+  outline: thick double #373737;
+  border-radius: 0;
+}
+#upd{
+  width: 50px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  transform: translateY(-50%) translateX(-50%);
+}
+#upd:hover{
+  width: 60px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  transform: translateY(-50%) translateX(-50%);
+}
+

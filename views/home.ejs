@@ -8,10 +8,8 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
-        
-    
         <nav class="navbar navbar-expand-lg fixed-top">
-            <a class="navbar-brand m-0 p-0" href="#home">Nikhil Nalande</a>
+            <a class="navbar-brand m-0 p-0" href="/">Nikhil Nalande</a>
             <button id="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
@@ -33,59 +31,105 @@
             </div>
         </nav>
         <section>
-        <div class="container text-center border-dark">
-            <div class="row justify-content-center">
-                <div class="col-sm-12">
-                    <div id="home" >
-                        <h1 class="display-4">NIKHIL NALANDE</h1>
-                        <hr>
-                        <p class="h4">I'm a Computeer Engineer & Full Stack Developer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <hr class="style-five">
-    <section id="projects">
-        <h1 class="section-heading display-4 text-center">< Projects ></h1>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <% project.forEach(function(data){ %>
-                    <div class="col-lg-8 project my-3">
-                        <h1 class="project-name"><%= data.name %></h1>
-                        <div class="row content-main">
-                            <div class="col-lg-4 text-center">
-                                <img class="rounded img-thumbnail" src="<%= data.image %>">
-                            </div>
-                            <div class="col-lg-8 text-center">
-                                <p><%= data.description %></p>
-                                <a href="<%= data.hostedLink %>"><button><img src="assets/launch.png" alt=""></button></a>
-                                <a class="custom-button" href="<%= data.githunRepo %>"><button><img src="assets/github.png" alt=""></button></a>
-                            </div>
+            <div class="container text-center border-dark">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12">
+                        <div id="home" >
+                            <h1 class="display-4">NIKHIL NALANDE</h1>
+                            <hr>
+                            <p class="h4">I'm a Computeer Engineer & Full Stack Developer</p>
                         </div>
                     </div>
-                <% }); %>
-            </div>
-        </div>
-    </section>
-    <section id="skills">
-        <h1 class="section-heading-light display-4 text-center">< Skills & Frameworks ></h1>
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Javascript</li>
-                    <li>node.js</li>
-                    <li>MongoDB</li>
-                </div>
-                <div class="col-md-6">
-                    <li>Heroku</li>
-                    <li>Bootstrap 3 & 4</li>
-                    <li>jQuery</li>
-                    <li>Algorithms</li>
-                    <li>SASS & SCSS</li>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <hr class="style-five">
+        <section id="projects">
+            <h1 class="section-heading display-4 text-center">< Projects ></h1>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <% project.forEach(function(data){ %>
+                        <div class="col-lg-8 project my-3">
+                            <h1 class="project-name"><%= data.name %></h1>
+                            <div class="row content-main">
+                                <div class="col-lg-4 text-center">
+                                    <img class="rounded img-thumbnail" src="<%= data.image %>">
+                                </div>
+                                <div class="col-lg-8 text-center">
+                                    <p><%= data.description %></p>
+                                    <a href="<%= data.hostedLink %>"><button><img src="assets/launch.png" alt=""></button></a>
+                                    <a class="custom-button" href="<%= data.githunRepo %>"><button><img src="assets/github.png" alt=""></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h1 class="section-heading-light display-4 text-center">< Skills & Frameworks ></h1>
+            <div class="container text-center">
+                <div class="row justify-content-around">
+                    <div class="col-md-10">
+                        <img class="skills mx-4 mt-5" src="assets/HTML5_Logo.svg">
+                        <img class="skills mx-4 mt-5" src="assets/BOOTSTRAP_Logo.svg">
+                        <img class="skills mx-4 mt-5" src="assets/JAVASCRIPT_Logo.svg">
+                        <img class="skills mx-4 mt-5" src="assets/PS_Logo.svg">
+                        <img class="skills mx-4 mt-5" src="assets/CSS3_Logo.svg">
+                        <br>
+                        <img class="skills mx-4 my-5" src="assets/MONGODB_Logo.svg">
+                        <img class="skills mx-4 my-5" src="assets/HEROKU_Logo.svg">
+                        <img class="skills mx-4 my-5" src="assets/NODEJS_Logo.svg">
+                        <img class="skills mx-4 my-5" src="assets/JQUERY_Logo.svg">
+                        <img class="skills mx-4 my-5" src="assets/SASS_Logo.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact_me">
+            <div class="container pb-5">
+                <h1 class="display-4 text-center section-heading-light">< Contact Me ></h1>
+                <form action="/send" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="First-Name">First Name</label>
+                        <input type="text" class="form-m" id="First-Name" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="Last-Name">Last Name</label>
+                        <input type="text" class="form-m" id="Last-Name" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-m" id="email" placeholder="abc@xyz.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-m" id="message" rows="4" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <a href="#"><img id="upd" src="assets/upd.png"></a>
+        <section>
+            <div  class="container-fluid text-center">
+                <div class="row justify-content-center">
+                    <div id="footer"  class="col-md-12">
+                        <div id="copyrights">Nikhil Nalande © 2019</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <script src="stylesheets/home.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
+    
+    
