@@ -11,7 +11,7 @@ mongoose.connect(process.env.DATABASEURL, {
     useUnifiedTopology:true,
     useFindAndModify: false,
 });
-seeds();
+// seeds();
 // Setting up view engine for ejs
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
