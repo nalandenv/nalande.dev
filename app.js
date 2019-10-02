@@ -6,12 +6,12 @@ var express  = require("express"),
     routes   = require("./routes/routes"); //importing routes
 
 // setup database for projects
-mongoose.connect("mongodb://localhost/project_2" , {
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useUnifiedTopology:true,
     useFindAndModify: false,
 });
-// seeds();
+seeds();
 // Setting up view engine for ejs
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
