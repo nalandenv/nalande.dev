@@ -4,10 +4,11 @@ var express  = require("express"),
     Project  = require("./models/projects"),
     seeds    = require("./seeds"),
     routes   = require("./routes/routes"); //importing routes
+    const PORT = process.env.PORT || 3000;
 
 // setup database for projects
-
-mongoose.connect(process.env.DATABASEURL, {
+const dbURL = process.env.DATABASEURL;
+mongoose.connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology:true,
     useFindAndModify: false,
@@ -18,5 +19,9 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.use(routes);
-
-app.listen(process.env.PORT, process.env.IP);
+app.get("/resume", function(req, res){
+    res.sendFile(__dirname + "/public/assets/Resume - Nikhil Nalande - Full Stack Developer.pdf");
+});
+app.listen(PORT, function() {
+    console.log(`Server Started on ${PORT}`);
+});
