@@ -20,7 +20,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(routes);
 app.get("/resume", function(req, res){
-    res.sendFile(__dirname + "/public/assets/Resume - Nikhil Nalande - Full Stack Developer.pdf");
+    res.sendFile(__dirname + "/public/assets/Resume Nikhil Nalande.pdf");
 });
 app.listen(PORT, function() {
     console.log(`Server Started on ${PORT}`);
